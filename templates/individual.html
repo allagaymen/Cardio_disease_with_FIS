@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Individual Cardiovascular Risk Prediction</h1>
+    <div class="section">
+        <form method="POST" action="individual" id="individual-form">
+            <label for="age">Age:</label>
+            <input type="number" name="age" required><br>
+
+            <label for="gender">Gender (1: Female, 2: Male):</label>
+            <input type="number" name="gender" min="1" max="2" required><br>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" name="height" required><br>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" name="weight" required><br>
+
+            <label for="ap_high">Systolic BP:</label>
+            <input type="number" name="ap_high" required><br>
+
+            <label for="ap_low">Diastolic BP:</label>
+            <input type="number" name="ap_low" required><br>
+
+            <label for="cholesterol">Cholesterol (1–3):</label>
+            <input type="number" name="cholesterol" min="1" max="3" required><br>
+
+            <label for="glucose">Glucose (1–3):</label>
+            <input type="number" name="glucose" min="1" max="3" required><br>
+
+            <label for="smoke">Smoke (0 or 1):</label>
+            <input type="number" name="smoke" min="0" max="1" required><br>
+
+            <label for="alcohol">Alcohol (0 or 1):</label>
+            <input type="number" name="alcohol" min="0" max="1" required><br>
+
+            <label for="physical_activity">Physical Activity (0 or 1):</label>
+            <input type="number" name="physical_activity" min="0" max="1" required><br>
+
+            <button type="submit">Predict</button>
+        </form>
+        {% if risk %}
+        <h3>Predicted Risk</h3>
+        <div class="gauge">
+            <div class="gauge-fill" style="width: {{ risk_percent }}%;"></div>
+            <div class="gauge-cover">{{ risk }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
