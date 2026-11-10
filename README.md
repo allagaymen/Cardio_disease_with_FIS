@@ -31,4 +31,4 @@ This is a student project and not a medical tool.
 
 ---
 
-Author: Aymen Allag ([allagaymen](https://github.com/allagaymen)) · README by Ahmed Amine Tiffrent ([portfolio](https://www.aminetiffrent.com/portfolio))
+University project at ESI-SBA by Aymen Allag ([allagaymen](https://github.com/allagaymen)) and Ahmed Amine Tiffrent ([ahmed-tiffrent](https://github.com/ahmed-tiffrent), [portfolio](https://www.aminetiffrent.com/portfolio))
